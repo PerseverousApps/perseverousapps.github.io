@@ -9,10 +9,10 @@
 <body>
 <main>
 <h1>Event Recorder privacy policy</h1>
-<p class="meta">Perseverous Apps · Effective 4 October 2026</p>
+<p class="meta">Perseverous Apps · Effective 4 October 2026 · Updated 4 October 2026 (crash and error reports)</p>
 
 <div class="summary">
-<p><strong>In short:</strong> Event Recorder has no account, no ads and no analytics. Perseverous Apps does not receive any of your data. What you record stays on your phone unless you export it, share it, or send it to a server you set up yourself.</p>
+<p><strong>In short:</strong> Event Recorder has no account, no ads and no analytics. What you record stays on your phone unless you export it, share it, or send it to a server you set up yourself. The only thing Perseverous Apps can receive is crash and error reports, and only if you agree to them; they never contain your events or tags.</p>
 </div>
 
 <h2>What the app stores on your phone</h2>
@@ -34,6 +34,17 @@
 <p><strong>Device details</strong> are off by default. If you turn them on (for troubleshooting), messages also include: the app's name, version and build; the random installation ID; the phone's manufacturer and model, Android version, language and time zone; the phone clock's offset from internet time, how long the app has been running, and network and power conditions (such as network type, whether a VPN, airplane mode, Battery Saver or Data Saver is on, battery level and charging). They never include your name, phone number, location, contacts, or hardware identifiers.</p>
 <p>How well these messages are protected on the way depends on the method you choose: syslog over TLS and SNMPv3 with privacy are encrypted; plain syslog (UDP or TCP) and SNMPv2c are not.</p>
 
+<h2>Crash and error reports</h2>
+<p>When you first open the app, it asks whether it may send crash and error reports. Nothing is collected or sent unless you say yes, and you can change your answer any time in the app's settings (turning it off deletes any reports not yet sent).</p>
+<p>If you agree, the app reports crashes, errors and failed sends to Perseverous Apps through <strong>Sentry</strong>, an error-tracking service run by Functional Software, Inc. in the United States. A report contains:</p>
+<ul>
+  <li>the error and where in the app it happened (the program code location);</li>
+  <li>the app version and build;</li>
+  <li>the phone's manufacturer and model, and the Android version.</li>
+</ul>
+<p>Before a report leaves your phone, the app removes your server's address, your SNMP user name and community, and any host names, IP addresses, network hardware addresses, email addresses, certificate names and logins it finds in the error text. Reports never include your events, tags, passwords, contacts or location, and no ID that follows you or your phone. Like any internet connection, Sentry can see the IP address a report comes from; Perseverous Apps does not use it to identify anyone.</p>
+<p>Reports are used only to find and fix problems in the app. They are kept in Perseverous Apps' Sentry account for a limited time under its retention settings, are not sold, and are not used for advertising.</p>
+
 <h2>Internet time servers</h2>
 <p>To show the exact time, the app asks public time servers (pool.ntp.org, time.cloudflare.com and time.nist.gov) for the current time. Like any internet connection, those servers see your phone's IP address. No event or personal information is sent to them.</p>
 
@@ -42,7 +53,7 @@
 
 <h2>Permissions</h2>
 <ul>
-  <li><strong>Internet access:</strong> for time servers, and for sending to your server when you turn that on.</li>
+  <li><strong>Internet access:</strong> for time servers, for sending to your server when you turn that on, and for crash and error reports if you agreed to them.</li>
   <li><strong>Network state:</strong> to know when a connection is available, so waiting messages can be retried.</li>
 </ul>
 <p>The app does not request access to your location, contacts, camera, microphone, files or phone identity.</p>
